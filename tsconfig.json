@@ -45,6 +45,7 @@
     "esModuleInterop": true,
     "resolveJsonModule": true,
     "allowJs": false,
-    "noImplicitAny": true,
-  }
+    "noImplicitAny": true
+  },
+  "exclude": ["apps", "node_modules", "build"]
 }

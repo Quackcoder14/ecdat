@@ -11,9 +11,6 @@ dist/
 downloads/
 eggs/
 .eggs/
-# Python virtual environment lib directories at root only
-/lib/
-/lib64/
 parts/
 sdist/
 var/
