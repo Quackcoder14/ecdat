@@ -83,7 +83,3 @@ Thumbs.db
 
 # OpenCode skills
 .opencode/
-
-# Services and scanner (not needed for web deployment)
-services/
-scanner/
