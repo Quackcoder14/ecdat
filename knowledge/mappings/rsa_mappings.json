@@ -1,0 +1,28 @@
+{
+  "algorithm": "RSA",
+  "mappings": {
+    "key_transport": {
+      "primary": "ML-KEM-768",
+      "alternative": "ML-KEM-1024",
+      "hybrid_option": "RSA_2048 + ML-KEM-768",
+      "rationale": "ML-KEM provides IND-CCA2 secure key encapsulation suitable for replacing RSA key transport"
+    },
+    "digital_signature": {
+      "primary": "ML-DSA-65",
+      "alternative": "SLH-DSA-SHA256-192s",
+      "hybrid_option": "RSA_2048 + ML-DSA-65",
+      "rationale": "ML-DSA provides EUF-CMA secure signatures suitable for replacing RSA signatures"
+    },
+    "key_agreement": {
+      "primary": "ML-KEM-768",
+      "alternative": "ML-KEM-1024",
+      "hybrid_option": "RSA_2048 + ML-KEM-768",
+      "rationale": "ML-KEM can be used in authenticated key exchange protocols to replace RSA key agreement"
+    }
+  },
+  "migration_complexity": {
+    "key_transport": "MEDIUM",
+    "digital_signature": "MEDIUM",
+    "key_agreement": "MEDIUM"
+  }
+}

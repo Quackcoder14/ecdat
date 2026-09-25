@@ -1,0 +1,39 @@
+{
+  "algorithm": "ML-DSA",
+  "family": "post_quantum",
+  "variant_name": "Dilithium",
+  "security_levels": {
+    "ML-DSA-44": "NIST_LEVEL_2",
+    "ML-DSA-65": "NIST_LEVEL_3",
+    "ML-DSA-87": "NIST_LEVEL_5"
+  },
+  "key_sizes": {
+    "ML-DSA-44": {
+      "public_key": 1312,
+      "private_key": 2528,
+      "signature": 2420
+    },
+    "ML-DSA-65": {
+      "public_key": 1952,
+      "private_key": 4000,
+      "signature": 3309
+    },
+    "ML-DSA-87": {
+      "public_key": 2592,
+      "private_key": 4896,
+      "signature": 4627
+    }
+  },
+  "common_usages": [
+    "digital_signature",
+    "authentication",
+    "code_signing",
+    "tls_authentication"
+  ],
+  "nist_status": "STANDARDIZED_2024",
+  "performance_characteristics": {
+    "computationally_efficient": true,
+    "constant_time_implementation": true,
+    "larger_signatures": true
+  }
+}

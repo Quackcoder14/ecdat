@@ -1,0 +1,24 @@
+{
+  "algorithm": "SHA-256",
+  "family": "hash",
+  "digest_size": 256,
+  "quantum_status": "CONDITIONAL",
+  "shor_vulnerable": false,
+  "grover_impact": "quadratic_speedup",
+  "common_usages": [
+    "message_digest",
+    "digital_signature",
+    "password_hashing",
+    "merkle_trees",
+    "blockchain"
+  ],
+  "security_levels": {
+    "collision_resistance": "128_BIT_POST_QUANTUM",
+    "preimage_resistance": "128_BIT_POST_QUANTUM",
+    "second_preimage_resistance": "128_BIT_POST_QUANTUM"
+  },
+  "deprecation_status": {
+    "nist": "ACCEPTABLE",
+    "cnssa": "ACCEPTABLE"
+  }
+}

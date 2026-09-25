@@ -1,0 +1,22 @@
+{
+  "algorithm": "ECDH",
+  "family": "asymmetric",
+  "curves": ["P-256", "P-384", "P-521"],
+  "key_sizes": [256, 384, 521],
+  "quantum_status": "VULNERABLE",
+  "shor_vulnerable": true,
+  "grover_impact": "none",
+  "common_usages": [
+    "key_establishment",
+    "key_agreement"
+  ],
+  "security_levels": {
+    "P-256": "NIST_SP800_57_PART1_REV5_UNTIL_2030",
+    "P-384": "NIST_SP800_57_PART1_REV5_BEYOND_2030",
+    "P-521": "SUITE_B_SUPPLEMENTAL"
+  },
+  "deprecation_status": {
+    "nist": "NOT_RECOMMENDED_AFTER_2030",
+    "cnssa": "NOT_RECOMMENDED_AFTER_2030"
+  }
+}

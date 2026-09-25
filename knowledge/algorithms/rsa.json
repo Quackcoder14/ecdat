@@ -1,0 +1,24 @@
+{
+  "algorithm": "RSA",
+  "family": "asymmetric",
+  "key_sizes": [1024, 2048, 3072, 4096],
+  "quantum_status": "VULNERABLE",
+  "shor_vulnerable": true,
+  "grover_impact": "none",
+  "common_usages": [
+    "key_transport",
+    "digital_signature",
+    "key_agreement",
+    "encryption"
+  ],
+  "security_levels": {
+    "1024": "LEGACY",
+    "2048": "NIST_SP800_57_PART1_REV5_UNTIL_2030",
+    "3072": "NIST_SP800_57_PART1_REV5_BEYOND_2030",
+    "4096": "SUITE_B_SUPPLEMENTAL"
+  },
+  "deprecation_status": {
+    "nist": "NOT_RECOMMENDED_AFTER_2030",
+    "cnssa": "NOT_RECOMMENDED_AFTER_2030"
+  }
+}

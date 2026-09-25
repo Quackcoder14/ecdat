@@ -1,0 +1,58 @@
+{
+  "algorithm": "SLH-DSA",
+  "family": "post_quantum",
+  "variant_name": "SPHINCS+",
+  "security_levels": {
+    "SLH-DSA-SHA256-128s": "NIST_LEVEL_1",
+    "SLH-DSA-SHA256-128f": "NIST_LEVEL_1",
+    "SLH-DSA-SHA256-192s": "NIST_LEVEL_3",
+    "SLH-DSA-SHA256-192f": "NIST_LEVEL_3",
+    "SLH-DSA-SHA256-256s": "NIST_LEVEL_5",
+    "SLH-DSA-SHA256-256f": "NIST_LEVEL_5"
+  },
+  "key_sizes": {
+    "SLH-DSA-SHA256-128s": {
+      "public_key": 32,
+      "private_key": 64,
+      "signature": 7856
+    },
+    "SLH-DSA-SHA256-128f": {
+      "public_key": 32,
+      "private_key": 64,
+      "signature": 17064
+    },
+    "SLH-DSA-SHA256-192s": {
+      "public_key": 48,
+      "private_key": 96,
+      "signature": 16224
+    },
+    "SLH-DSA-SHA256-192f": {
+      "public_key": 48,
+      "private_key": 96,
+      "signature": 35664
+    },
+    "SLH-DSA-SHA256-256s": {
+      "public_key": 64,
+      "private_key": 128,
+      "signature": 29792
+    },
+    "SLH-DSA-SHA256-256f": {
+      "public_key": 64,
+      "private_key": 128,
+      "signature": 49856
+    }
+  },
+  "common_usages": [
+    "digital_signature",
+    "long_term_archival",
+    "code_signing",
+    "firmware_signing"
+  ],
+  "nist_status": "STANDARDIZED_2024",
+  "performance_characteristics": {
+    "computationally_intensive": true,
+    "stateless_hash_based": true,
+    "very_large_signatures": true,
+    "no_secret_state": true
+  }
+}

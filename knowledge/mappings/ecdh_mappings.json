@@ -1,0 +1,21 @@
+{
+  "algorithm": "ECDH",
+  "mappings": {
+    "key_establishment": {
+      "primary": "ML-KEM-768",
+      "alternative": "ML-KEM-1024",
+      "hybrid_option": "ECDH_P-256 + ML-KEM-768",
+      "rationale": "ML-KEM provides IND-CCA2 secure key encapsulation suitable for replacing ECDH key establishment"
+    },
+    "key_agreement": {
+      "primary": "ML-KEM-768",
+      "alternative": "ML-KEM-1024",
+      "hybrid_option": "ECDH_P-256 + ML-KEM-768",
+      "rationale": "ML-KEM can be used in authenticated key exchange protocols to replace ECDH key agreement"
+    }
+  },
+  "migration_complexity": {
+    "key_establishment": "MEDIUM",
+    "key_agreement": "MEDIUM"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "algorithm": "ML-KEM",
+  "family": "post_quantum",
+  "variant_name": "Kyber",
+  "security_levels": {
+    "ML-KEM-512": "NIST_LEVEL_1",
+    "ML-KEM-768": "NIST_LEVEL_3",
+    "ML-KEM-1024": "NIST_LEVEL_5"
+  },
+  "key_sizes": {
+    "ML-KEM-512": {
+      "public_key": 800,
+      "private_key": 1632,
+      "ciphertext": 768
+    },
+    "ML-KEM-768": {
+      "public_key": 1184,
+      "private_key": 2400,
+      "ciphertext": 1088
+    },
+    "ML-KEM-1024": {
+      "public_key": 1568,
+      "private_key": 3168,
+      "ciphertext": 1568
+    }
+  },
+  "common_usages": [
+    "key_encapsulation",
+    "key_establishment",
+    "tls_key_exchange",
+    "vpn"
+  ],
+  "nist_status": "STANDARDIZED_2024",
+  "performance_characteristics": {
+    "computationally_efficient": true,
+    "constant_time_implementation": true
+  }
+}

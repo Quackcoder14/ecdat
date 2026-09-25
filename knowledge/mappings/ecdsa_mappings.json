@@ -1,0 +1,21 @@
+{
+  "algorithm": "ECDSA",
+  "mappings": {
+    "digital_signature": {
+      "primary": "ML-DSA-65",
+      "alternative": "SLH-DSA-SHA256-192s",
+      "hybrid_option": "ECDSA_P-256 + ML-DSA-65",
+      "rationale": "ML-DSA provides EUF-CMA secure signatures suitable for replacing ECDSA signatures"
+    },
+    "authentication": {
+      "primary": "ML-DSA-65",
+      "alternative": "SLH-DSA-SHA256-192s",
+      "hybrid_option": "ECDSA_P-256 + ML-DSA-65",
+      "rationale": "ML-DSA can be used in authentication protocols to replace ECDSA-based authentication"
+    }
+  },
+  "migration_complexity": {
+    "digital_signature": "MEDIUM",
+    "authentication": "MEDIUM"
+  }
+}

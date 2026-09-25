@@ -1,0 +1,23 @@
+{
+  "algorithm": "AES",
+  "family": "symmetric",
+  "key_sizes": [128, 192, 256],
+  "quantum_status": "NOT_PRIMARY_TARGET",
+  "shor_vulnerable": false,
+  "grover_impact": "quadratic_speedup",
+  "common_usages": [
+    "data_encryption",
+    "bulk_encryption",
+    "disk_encryption",
+    "tls_records"
+  ],
+  "security_levels": {
+    "128": "NIST_SP800_57_PART1_REV5_AES_128_UNTIL_2030",
+    "192": "NIST_SP800_57_PART1_REV5_AES_192_BEYOND_2030",
+    "256": "NIST_SP800_57_PART1_REV5_AES_256_BEYOND_2030"
+  },
+  "deprecation_status": {
+    "nist": "ACCEPTABLE",
+    "cnssa": "ACCEPTABLE"
+  }
+}

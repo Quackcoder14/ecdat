@@ -1,0 +1,51 @@
+# Risk assessment rules for ECDAT
+# Based on NIST IR 8419 and Mosca's framework
+
+risk_factors:
+  quantum_vulnerable:
+    weight: 0.3
+    description: "Algorithm is vulnerable to quantum attacks via Shor's algorithm"
+    
+  asymmetric_algorithm:
+    weight: 0.2
+    description: "Asymmetric cryptography generally requires more complex migration"
+    
+  long_data_lifetime:
+    weight: 0.25
+    description: "Data must remain secure for extended period post-migration"
+    
+  high_business_criticality:
+    weight: 0.15
+    description: "Asset belongs to critical business application"
+    
+  complex_migration:
+    weight: 0.1
+    description: "Migration requires significant protocol or application changes"
+
+risk_levels:
+  CRITICAL:
+    min_score: 80
+    description: "Immediate action required"
+  HIGH:
+    min_score: 60
+    max_score: 79
+    description: "Action required in near term"
+  MEDIUM:
+    min_score: 40
+    max_score: 59
+    description: "Action required in medium term"
+  LOW:
+    min_score: 20
+    max_score: 39
+    description: "Monitor and plan for future"
+  INFORMATIONAL:
+    min_score: 0
+    max_score: 19
+    description: "No action required, for awareness only"
+
+# Default values for Mosca-style assessment
+mosca_defaults:
+  default_data_security_lifetime_years: 10
+  default_migration_lead_time_years: 3
+  default_threat_horizon_years: 10
+  concern_threshold_years: 0  # If (data_lifetime + migration_lead_time) > threat_horizon, then concern

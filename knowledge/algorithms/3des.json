@@ -1,0 +1,21 @@
+{
+  "algorithm": "3DES",
+  "family": "symmetric",
+  "key_sizes": [168],
+  "quantum_status": "NOT_PRIMARY_TARGET",
+  "shor_vulnerable": false,
+  "grover_impact": "quadratic_speedup",
+  "common_usages": [
+    "legacy_data_encryption",
+    "financial_transactions",
+    "banking_systems"
+  ],
+  "security_levels": {
+    "168": "LEGACY_DEPRECATED"
+  },
+  "deprecation_status": {
+    "nist": "DEPRECATED_SINCE_2017",
+    "cnssa": "PROHIBITED",
+    "reason": "SMALL_BLOCK_SIZE_VULNERABLE_TO_SWEET32"
+  }
+}

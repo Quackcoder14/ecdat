@@ -1,0 +1,104 @@
+services:
+  postgres:
+    image: postgres:15
+    container_name: ecdat-postgres
+    environment:
+      POSTGRES_USER: ecdat
+      POSTGRES_PASSWORD: ecdat_secure_password
+      POSTGRES_DB: ecdat
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ecdat -d ecdat"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  redis:
+    image: redis:7-alpine
+    container_name: ecdat-redis
+    ports:
+      - "6379:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  api:
+    build:
+      context: ./services/api
+      dockerfile: Dockerfile
+    container_name: ecdat-api
+    environment:
+      - DATABASE_URL=postgresql://ecdat:ecdat_secure_password@postgres:5432/ecdat
+      - REDIS_URL=redis://redis:6379
+      - JWT_SECRET=super-secret-jwt-key-change-in-production
+      - ARTIFACT_STORAGE_PATH=/app/artifacts
+      - MAX_ARTIFACT_SIZE=104857600
+      - SCAN_TIMEOUT_SECONDS=300
+      - LLM_PROVIDER=mock
+      - LLM_MODEL=demo-model
+      - DEMO_MODE=true
+      - SCAN_INPUT_ROOT=/scan-input
+    volumes:
+      - artifacts:/app/artifacts
+      - ./scan-target:/scan-input:ro
+      - ./scanner:/app/scanner:ro
+    ports:
+      - "8000:8000"
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    command: uvicorn main:app --host 0.0.0.0 --port 8000 --workers 1
+
+  worker:
+    build:
+      context: ./services/worker
+      dockerfile: Dockerfile
+    container_name: ecdat-worker
+    environment:
+      - DATABASE_URL=postgresql://ecdat:ecdat_secure_password@postgres:5432/ecdat
+      - REDIS_URL=redis://redis:6379
+      - JWT_SECRET=super-secret-jwt-key-change-in-production
+      - ARTIFACT_STORAGE_PATH=/app/artifacts
+      - MAX_ARTIFACT_SIZE=104857600
+      - SCAN_TIMEOUT_SECONDS=300
+      - LLM_PROVIDER=mock
+      - LLM_MODEL=demo-model
+      - DEMO_MODE=true
+      - SCAN_INPUT_ROOT=/scan-input
+    volumes:
+      - artifacts:/app/artifacts
+      - ./scan-target:/scan-input:ro
+      - ./scanner:/app/scanner:ro
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    command: python -m worker.main
+
+  web:
+    build:
+      context: ./apps/web
+      dockerfile: Dockerfile
+    container_name: ecdat-web
+    environment:
+      - NEXT_PUBLIC_API_URL=http://localhost:8000
+      - NEXT_PUBLIC_LLM_PROVIDER=mock
+      - NEXT_PUBLIC_LLM_MODEL=demo-model
+      - NEXT_PUBLIC_DEMO_MODE=true
+    ports:
+      - "3000:3000"
+    depends_on:
+      - api
+    network_mode: bridge
+
+volumes:
+  postgres_data:
+  artifacts:
