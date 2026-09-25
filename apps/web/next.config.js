@@ -5,7 +5,12 @@ const nextConfig = {
     optimizePackageImports: ['lucide-react'],
   },
   images: {
-    domains: ['localhost'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '**',
+      },
+    ],
   },
 };
 
