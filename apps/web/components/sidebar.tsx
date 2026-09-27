@@ -46,7 +46,7 @@ export function Sidebar({ className }: { className?: string }) {
              <ShieldCheck className="h-5 w-5 text-primary" />
            </div>
            <div>
-             <div className="font-bold text-sm tracking-wide text-foreground">ASTRA</div>
+             <div className="font-bold text-sm tracking-wide text-foreground">KAVACH</div>
              <div className="text-[11px] text-muted-foreground">Cryptographic Discovery & Post-Quantum Readiness</div>
            </div>
          </div>
@@ -82,7 +82,7 @@ export function Sidebar({ className }: { className?: string }) {
             </div>
 <div className="truncate text-xs">
                <p className="font-medium text-foreground truncate">Demo Admin</p>
-               <p className="text-muted-foreground truncate">admin@astra.demo</p>
+               <p className="text-muted-foreground truncate">admin@kavach.demo</p>
              </div>
           </div>
           <button

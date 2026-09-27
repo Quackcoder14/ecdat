@@ -6,7 +6,7 @@ import { Input } from '@/components/ui/input';
 import { ShieldCheck, Lock, Mail, ArrowRight, ShieldAlert, KeyRound, Sparkles } from 'lucide-react';
 
 export default function LoginPage() {
-  const [email, setEmail] = useState('admin@astra.demo');
+  const [email, setEmail] = useState('admin@kavach.demo');
   const [password, setPassword] = useState('demo123');
   const [error, setError] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(false);
@@ -48,7 +48,7 @@ export default function LoginPage() {
   };
 
   const fillDemoCredentials = () => {
-    setEmail('admin@astra.demo');
+    setEmail('admin@kavach.demo');
     setPassword('demo123');
   };
 
@@ -63,7 +63,7 @@ export default function LoginPage() {
              <ShieldCheck className="h-6 w-6 text-indigo-400" />
            </div>
            <div>
-             <span className="text-xl font-bold tracking-tight">ASTRA</span>
+             <span className="text-xl font-bold tracking-tight">KAVACH</span>
              <span className="text-xs ml-2 px-2 py-0.5 rounded-full bg-indigo-500/20 text-indigo-300 border border-indigo-400/30">
                v1.0 Quantum Ready
              </span>
@@ -101,7 +101,7 @@ export default function LoginPage() {
         </div>
 
 <div className="relative z-10 text-xs text-slate-400">
-           ASTRA — Cryptographic Discovery & Post-Quantum Readiness Platform &copy; 2026
+           KAVACH — Cryptographic Discovery & Post-Quantum Readiness Platform &copy; 2026
          </div>
       </div>
 
@@ -113,7 +113,7 @@ export default function LoginPage() {
                <div className="h-9 w-9 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center">
                  <ShieldCheck className="h-5 w-5 text-primary" />
                </div>
-               <span className="font-bold text-xl">ASTRA</span>
+               <span className="font-bold text-xl">KAVACH</span>
              </div>
             <h2 className="text-2xl font-bold tracking-tight text-foreground">
               Sign in to your account
@@ -129,7 +129,7 @@ export default function LoginPage() {
                <Sparkles className="h-4 w-4 text-primary shrink-0" />
                <div>
                  <span className="font-semibold text-foreground">Demo Account:</span>{' '}
-                 <code className="text-muted-foreground">admin@astra.demo</code>
+                 <code className="text-muted-foreground">admin@kavach.demo</code>
                </div>
              </div>
             <Button
@@ -158,7 +158,7 @@ export default function LoginPage() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   className="pl-9"
-                  placeholder="admin@astra.demo"
+                  placeholder="admin@kavach.demo"
                 />
               </div>
             </div>

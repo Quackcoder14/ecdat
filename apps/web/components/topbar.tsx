@@ -76,7 +76,7 @@ export function Topbar() {
           </div>
 <div className="hidden sm:block text-left text-xs">
              <p className="font-semibold text-foreground leading-none">Demo Admin</p>
-             <p className="text-muted-foreground text-[10px] mt-0.5">admin@astra.demo</p>
+             <p className="text-muted-foreground text-[10px] mt-0.5">admin@kavach.demo</p>
            </div>
         </div>
       </div>

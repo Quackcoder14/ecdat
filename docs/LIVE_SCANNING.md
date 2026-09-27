@@ -1,4 +1,4 @@
-# ASTRA Live Scanning Documentation
+# KAVACH Live Scanning Documentation
 
 **How Real Scanning Works in Demo Mode**
 
@@ -21,9 +21,9 @@
 
 ## Overview
 
-In **Demo mode**, ASTRA performs **real, live scanning** of user-supplied artifacts at scan time. There are no pre-computed results, no hidden fixture loading, and no mock data substitution.
+In **Demo mode**, KAVACH performs **real, live scanning** of user-supplied artifacts at scan time. There are no pre-computed results, no hidden fixture loading, and no mock data substitution.
 
-**The Promise**: When you select Demo mode, provide a scan target, and start a scan — ASTRA actually executes scanner processes against the current contents of your target at that moment.
+**The Promise**: When you select Demo mode, provide a scan target, and start a scan — KAVACH actually executes scanner processes against the current contents of your target at that moment.
 
 ---
 
@@ -332,8 +332,8 @@ Storage + Export
   "metadata": {
     "timestamp": "2025-01-15T14:03:20Z",
     "tools": [{
-      "vendor": "ASTRA",
-      "name": "ASTRA Scanner",
+      "vendor": "KAVACH",
+      "name": "KAVACH Scanner",
       "version": "1.0.0"
     }],
     "source_scan_id": "scan-uuid",
@@ -492,14 +492,14 @@ else:
 
 #### Prerequisites
 ```bash
-# 1. Start ASTRA
+# 1. Start KAVACH
 docker compose up --build
 
 # 2. Seed demo data
 docker compose exec api python -m scripts.seed
 
 # 3. Open http://localhost:3000
-# Login: admin@astra.demo / demo123
+# Login: admin@kavach.demo / demo123
 ```
 
 ### Demo Steps (5 Minutes)
@@ -507,7 +507,7 @@ docker compose exec api python -m scripts.seed
 | Step | Action | Expected |
 |------|--------|----------|
 | 1 | Open http://localhost:3000 | Login page |
-| 2 | Login: `admin@astra.demo` / `demo123` | Dashboard loads |
+| 2 | Login: `admin@kavach.demo` / `demo123` | Dashboard loads |
 | 3 | Click **DEMO** in header | Mode shows "DEMO · Live data" |
 | 4 | Click **Projects** → **+ New project** | Create "Live Test" |
 | 5 | Open "Live Test" → **Start Scan** | Scan creation dialog |
@@ -652,4 +652,4 @@ docker compose exec worker ls -la /scan-input
 ---
 
 *Last Updated: 2025-01-15*  
-*ASTRA Live Scanning Documentation v1.0*
+*KAVACH Live Scanning Documentation v1.0*

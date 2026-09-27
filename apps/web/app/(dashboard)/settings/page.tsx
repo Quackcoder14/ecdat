@@ -35,7 +35,7 @@ export default function SettingsPage() {
     <div className="space-y-6">
 <div>
          <h1 className="text-2xl font-bold text-foreground">Settings</h1>
-         <p className="text-muted-foreground">Manage ASTRA configuration</p>
+         <p className="text-muted-foreground">Manage KAVACH configuration</p>
        </div>
 
       <Tabs defaultValue="general" className="w-full">
@@ -131,7 +131,7 @@ export default function SettingsPage() {
               <CardTitle>External Scanner Binaries</CardTitle>
             </CardHeader>
             <CardContent className="space-y-2 text-sm text-muted-foreground">
-              <p>ASTRA uses external scanner binaries for production scans. Ensure these are installed in your PATH:</p>
+              <p>KAVACH uses external scanner binaries for production scans. Ensure these are installed in your PATH:</p>
               <ul className="list-disc list-inside space-y-1 ml-4">
                 <li><code>semgrep</code> - Source code analysis</li>
                 <li><code>syft</code> - Dependency/SBOM analysis</li>

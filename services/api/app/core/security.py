@@ -1,5 +1,5 @@
 """
-Security utilities for ASTRA
+Security utilities for KAVACH
 """
 
 from datetime import datetime, timedelta

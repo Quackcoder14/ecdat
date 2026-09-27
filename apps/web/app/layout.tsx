@@ -5,7 +5,7 @@ import { Inter } from 'next/font/google';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'ASTRA — Cryptographic Discovery & Post-Quantum Readiness Platform',
+  title: 'KAVACH — Cryptographic Discovery & Post-Quantum Readiness Platform',
   description: 'Cryptographic discovery, quantum-risk assessment, and post-quantum migration planning',
 };
 

@@ -15,7 +15,7 @@ def init_db():
     Base.metadata.create_all(bind=engine)
 
 app = FastAPI(
-    title="ASTRA API",
+    title="KAVACH API",
     description="Cryptographic Discovery & Post-Quantum Readiness Platform",
     version="1.0.0",
 )
@@ -34,11 +34,11 @@ app.include_router(api_router, prefix="/api")
 @app.on_event("startup")
 async def startup_event():
     init_db()
-    logger.info("ASTRA API started")
+    logger.info("KAVACH API started")
 
 @app.on_event("shutdown")
 async def shutdown_event():
-    logger.info("ASTRA API shutdown")
+    logger.info("KAVACH API shutdown")
 
 @app.get("/health")
 async def health_check():

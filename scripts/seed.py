@@ -57,11 +57,11 @@ def seed():
         Base.metadata.create_all(bind=engine)
         
         # Create demo user
-        user = db.query(User).filter(User.email == "admin@ecdat.demo").first()
+        user = db.query(User).filter(User.email == "admin@kavach.demo").first()
         if not user:
             user = User(
                 id=uuid.uuid4(),
-                email="admin@ecdat.demo",
+                email="admin@kavach.demo",
                 hashed_password=bcrypt.hash("demo123"),
                 full_name="Demo Admin",
                 role=UserRole.ADMIN,
@@ -78,7 +78,7 @@ def seed():
             project = Project(
                 id=uuid.uuid4(),
                 name="Acme Payments Platform",
-                description="Representative payment, identity, and API infrastructure used for ASTRA demonstration.",
+                description="Representative payment, identity, and API infrastructure used for KAVACH demonstration.",
                 status=ProjectStatus.ACTIVE,
                 owner_id=user.id,
                 data_mode=DataMode.SIMULATION,
@@ -407,8 +407,8 @@ def seed():
             "metadata": {
                 "timestamp": datetime.utcnow().isoformat() + "Z",
                 "tools": [{
-                    "vendor": "ASTRA",
-                    "name": "ASTRA Scanner",
+                    "vendor": "KAVACH",
+                    "name": "KAVACH Scanner",
                     "version": "1.0.0",
                 }],
             },

@@ -1,4 +1,4 @@
-# ASTRA
+# KAVACH
 
 ## Cryptographic Discovery & Post-Quantum Readiness Platform
 
@@ -73,7 +73,7 @@ docker compose exec api python -m scripts.seed
 
 ### Demo Credentials
 
-- **Email**: admin@astra.demo
+- **Email**: admin@kavach.demo
 - **Password**: demo123
 
 ## Environment Variables
@@ -155,7 +155,7 @@ cd apps/web && npm run lint
 
 ## Scanner Framework
 
-ASTRA uses a plugin-based scanner architecture:
+KAVACH uses a plugin-based scanner architecture:
 
 | Scanner Type | Tools (Production) | Demo Mode |
 |--------------|-------------------|-----------|

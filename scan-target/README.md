@@ -1,10 +1,10 @@
-# ASTRA Scan Target
+# KAVACH Scan Target
 
-This directory is a real ASTRA scanning target. The application scans the current contents at runtime.
+This directory is a real KAVACH scanning target. The application scans the current contents at runtime.
 
 ## Supported Examples
 
-This directory contains examples of cryptographic code that ASTRA can detect:
+This directory contains examples of cryptographic code that KAVACH can detect:
 
 ### Python Service (`python-service/`)
 - RSA key generation and signing
@@ -36,7 +36,7 @@ This directory contains examples of cryptographic code that ASTRA can detect:
 ## How to Use
 
 1. Copy your own repository contents into this directory (or replace the existing files)
-2. In ASTRA, select **Demo** mode
+2. In KAVACH, select **Demo** mode
 3. Create a project and select **Local Folder** as the source
 4. Select `scan-target` as the target
 5. Start a live scan
@@ -48,7 +48,7 @@ This directory contains examples of cryptographic code that ASTRA can detect:
 1. Open: `scan-target/python-service/crypto_service.py`
 2. Change the RSA key size or remove the RSA signing call
 3. Save
-4. Return to ASTRA
+4. Return to KAVACH
 5. Run another Demo scan
 6. Compare the findings - the result must reflect the file modification
 
