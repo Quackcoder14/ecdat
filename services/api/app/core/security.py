@@ -1,5 +1,5 @@
 """
-Security utilities for ECDAT
+Security utilities for ASTRA
 """
 
 from datetime import datetime, timedelta

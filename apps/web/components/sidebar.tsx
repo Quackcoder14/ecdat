@@ -41,15 +41,15 @@ export function Sidebar({ className }: { className?: string }) {
   return (
     <aside className={cn('w-64 bg-card border-r border-border flex flex-col justify-between shrink-0 h-screen sticky top-0', className)}>
       <div>
-        <div className="p-4 border-b border-border flex items-center gap-3">
-          <div className="h-9 w-9 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center text-primary font-bold">
-            <ShieldCheck className="h-5 w-5 text-primary" />
-          </div>
-          <div>
-            <div className="font-bold text-sm tracking-wide text-foreground">ECDAT PLATFORM</div>
-            <div className="text-[11px] text-muted-foreground">Quantum Discovery</div>
-          </div>
-        </div>
+<div className="p-4 border-b border-border flex items-center gap-3">
+           <div className="h-9 w-9 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center text-primary font-bold">
+             <ShieldCheck className="h-5 w-5 text-primary" />
+           </div>
+           <div>
+             <div className="font-bold text-sm tracking-wide text-foreground">ASTRA</div>
+             <div className="text-[11px] text-muted-foreground">Cryptographic Discovery & Post-Quantum Readiness</div>
+           </div>
+         </div>
 
         <nav className="p-3 space-y-1">
           {navItems.map((item) => {
@@ -80,10 +80,10 @@ export function Sidebar({ className }: { className?: string }) {
             <div className="h-8 w-8 rounded-full bg-primary/20 flex items-center justify-center font-semibold text-xs text-primary shrink-0">
               DA
             </div>
-            <div className="truncate text-xs">
-              <p className="font-medium text-foreground truncate">Demo Admin</p>
-              <p className="text-muted-foreground truncate">admin@ecdat.demo</p>
-            </div>
+<div className="truncate text-xs">
+               <p className="font-medium text-foreground truncate">Demo Admin</p>
+               <p className="text-muted-foreground truncate">admin@astra.demo</p>
+             </div>
           </div>
           <button
             onClick={handleLogout}

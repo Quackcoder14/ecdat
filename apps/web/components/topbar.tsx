@@ -74,10 +74,10 @@ export function Topbar() {
           <div className="h-8 w-8 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center font-bold text-xs text-primary">
             DA
           </div>
-          <div className="hidden sm:block text-left text-xs">
-            <p className="font-semibold text-foreground leading-none">Demo Admin</p>
-            <p className="text-muted-foreground text-[10px] mt-0.5">admin@ecdat.demo</p>
-          </div>
+<div className="hidden sm:block text-left text-xs">
+             <p className="font-semibold text-foreground leading-none">Demo Admin</p>
+             <p className="text-muted-foreground text-[10px] mt-0.5">admin@astra.demo</p>
+           </div>
         </div>
       </div>
     </header>

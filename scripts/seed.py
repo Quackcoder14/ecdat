@@ -78,7 +78,7 @@ def seed():
             project = Project(
                 id=uuid.uuid4(),
                 name="Acme Payments Platform",
-                description="Representative payment, identity, and API infrastructure used for ECDAT demonstration.",
+                description="Representative payment, identity, and API infrastructure used for ASTRA demonstration.",
                 status=ProjectStatus.ACTIVE,
                 owner_id=user.id,
                 data_mode=DataMode.SIMULATION,
@@ -407,8 +407,8 @@ def seed():
             "metadata": {
                 "timestamp": datetime.utcnow().isoformat() + "Z",
                 "tools": [{
-                    "vendor": "ECDAT",
-                    "name": "ECDAT Scanner",
+                    "vendor": "ASTRA",
+                    "name": "ASTRA Scanner",
                     "version": "1.0.0",
                 }],
             },

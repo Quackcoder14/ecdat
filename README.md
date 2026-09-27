@@ -1,6 +1,10 @@
-# ECDAT - Cryptographic Discovery & Quantum Readiness Platform
+# ASTRA
 
-An enterprise cryptographic discovery, assessment, and quantum-readiness platform.
+## Cryptographic Discovery & Post-Quantum Readiness Platform
+
+**Discover. Assess. Migrate.**
+
+An enterprise cryptographic discovery, quantum-risk assessment, and post-quantum migration planning platform.
 
 ## Architecture
 
@@ -52,7 +56,7 @@ LLM Provider
 
 ```bash
 # Clone and navigate
-cd ecdat
+cd sih-ecdat
 
 # Start all services
 docker compose up --build
@@ -69,7 +73,7 @@ docker compose exec api python -m scripts.seed
 
 ### Demo Credentials
 
-- **Email**: admin@ecdat.demo
+- **Email**: admin@astra.demo
 - **Password**: demo123
 
 ## Environment Variables
@@ -151,7 +155,7 @@ cd apps/web && npm run lint
 
 ## Scanner Framework
 
-ECDAT uses a plugin-based scanner architecture:
+ASTRA uses a plugin-based scanner architecture:
 
 | Scanner Type | Tools (Production) | Demo Mode |
 |--------------|-------------------|-----------|

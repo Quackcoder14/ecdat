@@ -15,8 +15,8 @@ def init_db():
     Base.metadata.create_all(bind=engine)
 
 app = FastAPI(
-    title="ECDAT API",
-    description="Cryptographic Discovery & Quantum Readiness Platform",
+    title="ASTRA API",
+    description="Cryptographic Discovery & Post-Quantum Readiness Platform",
     version="1.0.0",
 )
 
@@ -34,11 +34,11 @@ app.include_router(api_router, prefix="/api")
 @app.on_event("startup")
 async def startup_event():
     init_db()
-    logger.info("ECDAT API started")
+    logger.info("ASTRA API started")
 
 @app.on_event("shutdown")
 async def shutdown_event():
-    logger.info("ECDAT API shutdown")
+    logger.info("ASTRA API shutdown")
 
 @app.get("/health")
 async def health_check():

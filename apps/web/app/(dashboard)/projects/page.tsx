@@ -37,7 +37,7 @@ const initialProjects: ProjectItem[] = [
   {
     id: 'proj-1',
     name: 'Acme Payments Platform',
-    description: 'Representative payment, identity, and API infrastructure used for ECDAT cryptographic discovery.',
+    description: 'Representative payment, identity, and API infrastructure used for ASTRA cryptographic discovery.',
     status: 'ACTIVE',
     artifactsCount: 6,
     findingsCount: 5,
@@ -88,7 +88,7 @@ export default function ProjectsPage() {
     const newProj: ProjectItem = {
       id: `proj-${Date.now()}`,
       name: newProjectName,
-      description: newProjectDesc || 'Enterprise service monitored by ECDAT.',
+      description: newProjectDesc || 'Enterprise service monitored by ASTRA.',
       status: 'ACTIVE',
       artifactsCount: 1,
       findingsCount: 0,

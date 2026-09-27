@@ -6,7 +6,7 @@ import { Input } from '@/components/ui/input';
 import { ShieldCheck, Lock, Mail, ArrowRight, ShieldAlert, KeyRound, Sparkles } from 'lucide-react';
 
 export default function LoginPage() {
-  const [email, setEmail] = useState('admin@ecdat.demo');
+  const [email, setEmail] = useState('admin@astra.demo');
   const [password, setPassword] = useState('demo123');
   const [error, setError] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(false);
@@ -48,7 +48,7 @@ export default function LoginPage() {
   };
 
   const fillDemoCredentials = () => {
-    setEmail('admin@ecdat.demo');
+    setEmail('admin@astra.demo');
     setPassword('demo123');
   };
 
@@ -58,25 +58,25 @@ export default function LoginPage() {
       <div className="flex-1 bg-gradient-to-br from-slate-900 via-slate-800 to-indigo-950 hidden lg:flex flex-col justify-between p-12 text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-indigo-500/20 via-transparent to-transparent pointer-events-none" />
         
-        <div className="relative z-10 flex items-center gap-3">
-          <div className="h-10 w-10 rounded-xl bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-primary-foreground">
-            <ShieldCheck className="h-6 w-6 text-indigo-400" />
-          </div>
-          <div>
-            <span className="text-xl font-bold tracking-tight">ECDAT</span>
-            <span className="text-xs ml-2 px-2 py-0.5 rounded-full bg-indigo-500/20 text-indigo-300 border border-indigo-400/30">
-              v1.0 Quantum Ready
-            </span>
-          </div>
-        </div>
+<div className="relative z-10 flex items-center gap-3">
+           <div className="h-10 w-10 rounded-xl bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-primary-foreground">
+             <ShieldCheck className="h-6 w-6 text-indigo-400" />
+           </div>
+           <div>
+             <span className="text-xl font-bold tracking-tight">ASTRA</span>
+             <span className="text-xs ml-2 px-2 py-0.5 rounded-full bg-indigo-500/20 text-indigo-300 border border-indigo-400/30">
+               v1.0 Quantum Ready
+             </span>
+           </div>
+         </div>
 
-        <div className="relative z-10 max-w-lg space-y-6">
-          <h1 className="text-4xl font-extrabold tracking-tight leading-tight">
-            Cryptographic Discovery & Quantum Readiness Platform
-          </h1>
-          <p className="text-base text-slate-300 leading-relaxed">
-            Automate continuous cryptographic asset inventory, Mosca theorem quantum vulnerability assessments, and NIST-aligned PQC migration planning for enterprise estates.
-          </p>
+<div className="relative z-10 max-w-lg space-y-6">
+           <h1 className="text-4xl font-extrabold tracking-tight leading-tight">
+             Cryptographic Discovery & Post-Quantum Readiness Platform
+           </h1>
+           <p className="text-base text-slate-300 leading-relaxed">
+             Discover, assess, and plan migration for your enterprise cryptographic estate.
+           </p>
 
           <div className="grid grid-cols-2 gap-4 pt-4">
             <div className="p-4 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm">
@@ -100,21 +100,21 @@ export default function LoginPage() {
           </div>
         </div>
 
-        <div className="relative z-10 text-xs text-slate-400">
-          Enterprise Cryptographic Discovery and Transition (ECDAT) &copy; 2026
-        </div>
+<div className="relative z-10 text-xs text-slate-400">
+           ASTRA — Cryptographic Discovery & Post-Quantum Readiness Platform &copy; 2026
+         </div>
       </div>
 
       {/* Form Column */}
       <div className="flex-1 flex items-center justify-center p-8 sm:p-12">
         <div className="w-full max-w-md space-y-8">
           <div className="space-y-2 text-center lg:text-left">
-            <div className="lg:hidden flex items-center justify-center gap-2 mb-6">
-              <div className="h-9 w-9 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center">
-                <ShieldCheck className="h-5 w-5 text-primary" />
-              </div>
-              <span className="font-bold text-xl">ECDAT</span>
-            </div>
+<div className="lg:hidden flex items-center justify-center gap-2 mb-6">
+               <div className="h-9 w-9 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center">
+                 <ShieldCheck className="h-5 w-5 text-primary" />
+               </div>
+               <span className="font-bold text-xl">ASTRA</span>
+             </div>
             <h2 className="text-2xl font-bold tracking-tight text-foreground">
               Sign in to your account
             </h2>
@@ -124,14 +124,14 @@ export default function LoginPage() {
           </div>
 
           {/* Quick Demo Credentials Pill */}
-          <div className="p-3.5 rounded-lg border border-primary/20 bg-primary/5 flex items-center justify-between text-xs">
-            <div className="flex items-center gap-2">
-              <Sparkles className="h-4 w-4 text-primary shrink-0" />
-              <div>
-                <span className="font-semibold text-foreground">Demo Account:</span>{' '}
-                <code className="text-muted-foreground">admin@ecdat.demo</code>
-              </div>
-            </div>
+<div className="p-3.5 rounded-lg border border-primary/20 bg-primary/5 flex items-center justify-between text-xs">
+             <div className="flex items-center gap-2">
+               <Sparkles className="h-4 w-4 text-primary shrink-0" />
+               <div>
+                 <span className="font-semibold text-foreground">Demo Account:</span>{' '}
+                 <code className="text-muted-foreground">admin@astra.demo</code>
+               </div>
+             </div>
             <Button
               type="button"
               variant="outline"
@@ -158,7 +158,7 @@ export default function LoginPage() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   className="pl-9"
-                  placeholder="admin@ecdat.demo"
+                  placeholder="admin@astra.demo"
                 />
               </div>
             </div>

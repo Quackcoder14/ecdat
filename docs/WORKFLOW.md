@@ -1,6 +1,6 @@
-# ECDAT Technical Workflow Document
+# ASTRA Technical Workflow Document
 
-**Cryptographic Discovery & Quantum Readiness Platform — Technical Architecture**
+**Cryptographic Discovery & Post-Quantum Readiness Platform — Technical Architecture**
 
 ---
 
@@ -60,7 +60,7 @@ Report Generation / Export
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│                    ECDAT Application                         │
+│                    ASTRA Application                         │
 ├─────────────────────────────────────────────────────────────┤
 │  Mode Switch: [ SIMULATION ] [ DEMO ]                       │
 └─────────────────────────────────────────────────────────────┘
@@ -393,7 +393,7 @@ Storage + Export
   "specVersion": "1.7",
   "metadata": {
     "timestamp": "2025-01-15T14:03:20Z",
-    "tools": [{"vendor": "ECDAT", "name": "ECDAT Scanner", "version": "1.0.0"}],
+    "tools": [{"vendor": "ASTRA", "name": "ASTRA Scanner", "version": "1.0.0"}],
     "source_scan_id": "scan-uuid",
     "knowledge_base_version": "1.0",
     "scanner_provenance": ["native-source-scanner", "syft-scanner"]

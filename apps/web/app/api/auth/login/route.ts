@@ -74,7 +74,7 @@ export async function POST(request: NextRequest) {
   } catch (error) {
     console.error('Login error:', error);
     // If backend is unreachable but demo credentials were provided, allow login
-    if (email === 'admin@ecdat.demo' && password === 'demo123') {
+    if (email === 'admin@astra.demo' && password === 'demo123') {
       const token = 'demo-jwt-fallback-' + Date.now();
       const fallbackResponse = NextResponse.json({
         access_token: token,

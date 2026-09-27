@@ -5,8 +5,8 @@ import { Inter } from 'next/font/google';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'ECDAT - Cryptographic Discovery & Quantum Readiness Platform',
-  description: 'Enterprise cryptographic discovery, assessment, and quantum-readiness platform',
+  title: 'ASTRA — Cryptographic Discovery & Post-Quantum Readiness Platform',
+  description: 'Cryptographic discovery, quantum-risk assessment, and post-quantum migration planning',
 };
 
 export default function RootLayout({
